@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Aideus Книга</string>
+    <string name="book">Книга</string>
+    <string name="contacts">Контакты</string>
+    <string name="about">О книге</string>
+    <string name="settings">Настройки</string>
+    <string name="notes">Комментарии</string>
+    <string name="contents">Содержание</string>
+    <string name="delete">Удалить</string>
+    <string name="share">Поделиться</string>
+    <string name="update">Обновить</string>
+
+    <string name="lastposition_title">Сохранять закладку</string>
+    <string name="lastposition_summary">Сохранение последней открытой страницы и ее открытие при перезапуске приложения</string>
+    <string name="keepscreenon_title">Держать экран включенным</string>
+    <string name="keepscreenon_summary">Не выключать экран со временем при чтении в приложении</string>
+    <string name="hint">Введите ваши комментарии&#8230;</string>
+    <string name="aideus">AIDEUS</string>
+
+
+</resources>

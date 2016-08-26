@@ -1,0 +1,200 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:2:1-42:12
+	package
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:3:5-30
+		INJECTED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:5:22-64
+supports-screens
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:7:5-11:40
+	android:largeScreens
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:8:9-36
+	android:smallScreens
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:10:9-37
+	android:normalScreens
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:9:9-37
+	android:xlargeScreens
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:11:9-37
+application
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:13:5-40:19
+MERGED from [com.android.support:support-v13:23.4.0] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v13\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.commonsware.cwac:security:0.8.0] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.commonsware.cwac\security\0.8.0\AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:design:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\design\24.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.mikepenz:google-material-typeface:2.2.0.3.original] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.mikepenz\google-material-typeface\2.2.0.3.original\AndroidManifest.xml:27:5-20
+	android:label
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:16:9-41
+	android:allowBackup
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:14:9-36
+	android:icon
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:15:9-43
+	android:theme
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:17:9-40
+activity#com.aideus.book.ui.SplashActivity
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:19:9-27:20
+	android:label
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:21:13-45
+	android:noHistory
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:22:13-37
+	android:name
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:20:13-46
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:23:13-26:29
+action#android.intent.action.MAIN
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:24:17-69
+	android:name
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:24:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:25:27-74
+activity#com.aideus.book.ui.MainActivity
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:29:9-53
+	android:name
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:29:19-50
+activity#com.aideus.book.ui.SimpleContentActivity
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:30:9-62
+	android:name
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:30:19-59
+activity#com.aideus.book.ui.PreferencesActivity
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:31:9-60
+	android:name
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:31:19-57
+activity#com.aideus.book.ui.NoteActivity
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:32:9-34:77
+	android:theme
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:34:13-74
+	android:name
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:33:13-44
+service#com.aideus.book.data.remote.DownloadCheckService
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:37:9-39:40
+	android:exported
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:39:13-37
+	android:name
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:38:13-61
+uses-sdk
+INJECTED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:support-v13:23.4.0] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v13\23.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:appcompat-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.commonsware.cwac:security:0.8.0] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.commonsware.cwac\security\0.8.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mikepenz:materialdrawer:5.4.0] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.mikepenz\materialdrawer\5.4.0\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:recyclerview-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.mikepenz:materialize:0.9.0] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.mikepenz\materialize\0.9.0\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:appcompat-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.mikepenz:fastadapter:1.6.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.mikepenz\fastadapter\1.6.1\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:recyclerview-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:appcompat-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.mikepenz:iconics-core:2.7.2] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.mikepenz\iconics-core\2.7.2\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:appcompat-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:appcompat-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:design:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\design\24.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:recyclerview-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:appcompat-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.mikepenz:google-material-typeface:2.2.0.3.original] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.mikepenz\google-material-typeface\2.2.0.3.original\AndroidManifest.xml:23:5-25:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:23:9-51
+	android:targetSdkVersion
+		INJECTED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml

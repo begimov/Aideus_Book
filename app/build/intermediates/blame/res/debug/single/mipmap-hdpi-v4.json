@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_library_books_black_24dp.png",
+        "source": "D:\\AndroidApps\\Aideus_Book\\app\\src\\main\\res\\mipmap-hdpi\\ic_library_books_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_note_add_black_24dp.png",
+        "source": "D:\\AndroidApps\\Aideus_Book\\app\\src\\main\\res\\mipmap-hdpi\\ic_note_add_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_refresh_black_24dp.png",
+        "source": "D:\\AndroidApps\\Aideus_Book\\app\\src\\main\\res\\mipmap-hdpi\\ic_refresh_black_24dp.png"
+    },
+    {
+        "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "D:\\AndroidApps\\Aideus_Book\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    }
+]
