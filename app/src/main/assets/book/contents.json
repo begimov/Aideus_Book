@@ -1,29 +1,17 @@
 {
-  "title": "The War of the Worlds",
+  "title": "Title",
   "chapters": [
     {
       "file": "0.htm",
-      "title": "Book One: Chapters 1-9"
+      "title": "Предисловие"
     },
     {
       "file": "1.htm",
-      "title": "Book One: Chapters 10-14"
+      "title": "Мышление как поиск. Големы и алхимики."
     },
     {
       "file": "2.htm",
-      "title": "Book One: Chapters 14-17"
-    },
-    {
-      "file": "3.htm",
-      "title": "Book Two: Chapters 1-7"
-    },
-    {
-      "file": "4.htm",
-      "title": "Book Two: Chapters 7-10"
-    },
-    {
-      "file": "5.htm",
-      "title": "Project Gutenberg"
+      "title": "От числа к алгоритму"
     }
   ]
 }
