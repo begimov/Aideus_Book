@@ -109,20 +109,12 @@ public class NoteFragment extends Fragment implements TextWatcher {
         return super.onOptionsItemSelected(item);
     }
 
-    private int getPosition() {
-        return (getArguments().getInt(KEY_POSITION, -1));
-    }
-
     @SuppressWarnings("unused")
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(NoteLoadedEvent event) {
         if (event.getPosition() == getPosition()) {
             mEditor.setText(event.getProse());
         }
-    }
-
-    private Contract getContract() {
-        return ((Contract) getActivity());
     }
 
     @Override
@@ -136,5 +128,13 @@ public class NoteFragment extends Fragment implements TextWatcher {
     @Override
     public void afterTextChanged(Editable s) {
         mShareIntent.putExtra(Intent.EXTRA_TEXT, s.toString());
+    }
+
+    private int getPosition() {
+        return (getArguments().getInt(KEY_POSITION, -1));
+    }
+
+    private Contract getContract() {
+        return ((Contract) getActivity());
     }
 }
