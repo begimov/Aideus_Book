@@ -12,6 +12,8 @@ public class SimpleContentFragment extends WebViewFragment {
 
     private static final String KEY_FILE="file";
 
+    private static final String WEB_VIEW_DEFAULT_ENCODING = "utf-8";
+
     public static SimpleContentFragment newInstance(String file) {
         SimpleContentFragment f = new SimpleContentFragment();
         Bundle args = new Bundle();
@@ -35,7 +37,7 @@ public class SimpleContentFragment extends WebViewFragment {
                 super.onCreateView(inflater, container, savedInstanceState);
 
         WebSettings settings = getWebView().getSettings();
-        settings.setDefaultTextEncodingName("utf-8");
+        settings.setDefaultTextEncodingName(WEB_VIEW_DEFAULT_ENCODING);
         settings.setJavaScriptEnabled(true);
         settings.setSupportZoom(false);
         settings.setBuiltInZoomControls(false);
