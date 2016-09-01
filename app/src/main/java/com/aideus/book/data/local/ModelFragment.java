@@ -8,14 +8,13 @@ import android.os.Bundle;
 import android.os.Process;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.aideus.book.data.local.model.BookContents;
 import com.aideus.book.data.remote.DownloadCheckService;
 import com.aideus.book.events.BookLoadedEvent;
 import com.aideus.book.events.BookUpdatedEvent;
-import com.aideus.book.events.FontSizeChangedEvent;
 import com.google.gson.Gson;
+
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;

@@ -8,9 +8,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.aideus.book.R;
-import com.aideus.book.events.FontSizeChangedEvent;
-
-import org.greenrobot.eventbus.EventBus;
 
 public class FontSizeDialogPreference extends DialogPreference {
 

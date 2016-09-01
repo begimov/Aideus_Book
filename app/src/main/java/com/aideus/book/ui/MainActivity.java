@@ -12,16 +12,14 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.aideus.book.BuildConfig;
 import com.aideus.book.R;
-import com.aideus.book.data.local.model.BookContents;
 import com.aideus.book.data.local.ContentsAdapter;
 import com.aideus.book.data.local.ModelFragment;
-import com.aideus.book.events.BookLoadedEvent;
+import com.aideus.book.data.local.model.BookContents;
 import com.aideus.book.data.remote.DownloadCheckService;
-import com.aideus.book.events.FontSizeChangedEvent;
+import com.aideus.book.events.BookLoadedEvent;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;

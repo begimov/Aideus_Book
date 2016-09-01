@@ -11,10 +11,6 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebViewFragment;
 
-import com.aideus.book.events.FontSizeChangedEvent;
-
-import org.greenrobot.eventbus.EventBus;
-
 public class SimpleContentFragment extends WebViewFragment {
 
     private static final String PREF_FONT_SIZE = "fontSize";

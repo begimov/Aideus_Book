@@ -1,11 +1,11 @@
 [
     {
-        "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\material_drawer_circle_mask.xml",
-        "source": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\exploded-aar\\com.mikepenz\\materialdrawer\\5.4.0\\res\\drawable\\material_drawer_circle_mask.xml"
-    },
-    {
         "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
         "source": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\material_drawer_circle_mask.xml",
+        "source": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\exploded-aar\\com.mikepenz\\materialdrawer\\5.4.0\\res\\drawable\\material_drawer_circle_mask.xml"
     },
     {
         "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\material_drawer_badge.xml",
