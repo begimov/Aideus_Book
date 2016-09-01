@@ -18,6 +18,7 @@
     <string name="keepscreenon_summary">Не выключать экран со временем при чтении в приложении</string>
     <string name="hint">Введите ваши комментарии&#8230;</string>
     <string name="aideus">AIDEUS</string>
+    <string name="btn_save">Сохранить</string>
 
 
 </resources>
