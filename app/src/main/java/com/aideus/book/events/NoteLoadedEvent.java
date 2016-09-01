@@ -6,7 +6,7 @@ public class NoteLoadedEvent {
 
     private String mProse;
 
-    public NoteLoadedEvent(int position, String prose) {
+    public NoteLoadedEvent(final int position, final String prose) {
         mPosition =position;
         mProse = prose;
     }
