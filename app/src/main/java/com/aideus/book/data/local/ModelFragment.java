@@ -62,6 +62,10 @@ public class ModelFragment extends Fragment {
 
     private class LoadThread extends Thread {
 
+        static final String CONTENTS_JSON_FILENAME = "contents.json";
+
+        static final String BOOK_CONTENTS_JSON_LOCAL_URI = "book/contents.json";
+
         private Context context = null;
 
         LoadThread (Context context) {
@@ -81,10 +85,10 @@ public class ModelFragment extends Fragment {
             try {
                 InputStream is;
                 if (baseDir.exists()) {
-                    is = new FileInputStream(new File(baseDir, "contents.json"));
+                    is = new FileInputStream(new File(baseDir, CONTENTS_JSON_FILENAME));
                 }
                 else {
-                    is = context.getAssets().open("book/contents.json");
+                    is = context.getAssets().open(BOOK_CONTENTS_JSON_LOCAL_URI);
                 }
                 BufferedReader reader =
                         new BufferedReader(new InputStreamReader(is));
