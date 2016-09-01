@@ -33,7 +33,6 @@
             android:name=".ui.NoteActivity"
             android:theme="@style/android:Theme.Holo.Light.DarkActionBar" />
 
-
         <service
             android:name=".data.remote.DownloadCheckService"
             android:exported="false" />
