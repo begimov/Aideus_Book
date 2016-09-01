@@ -66,7 +66,7 @@ public class DownloadCheckService extends IntentService {
         return null;
     }
 
-    private File download(String url) throws IOException {
+    private File download(final String url) throws IOException {
         File output = new File(getFilesDir(), UPDATE_FILENAME);
         if (output.exists()) {
             output.delete();
