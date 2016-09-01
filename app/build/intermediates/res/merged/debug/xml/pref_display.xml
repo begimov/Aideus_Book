@@ -5,11 +5,16 @@
         android:defaultValue="true"
         android:key="saveLastPosition"
         android:summary="@string/lastposition_summary"
-        android:title="@string/lastposition_title"/>
+        android:title="@string/lastposition_title" />
+
     <CheckBoxPreference
         android:defaultValue="true"
         android:key="keepScreenOn"
         android:summary="@string/keepscreenon_summary"
-        android:title="@string/keepscreenon_title"/>
+        android:title="@string/keepscreenon_title" />
+
+    <com.aideus.book.ui.FontSizeDialogPreference
+        android:key="fontSize"
+        android:title="Размер шрифта"/>
 
 </PreferenceScreen>
