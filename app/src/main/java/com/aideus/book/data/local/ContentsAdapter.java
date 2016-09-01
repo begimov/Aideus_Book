@@ -11,7 +11,8 @@ public class ContentsAdapter extends FragmentStatePagerAdapter {
 
     private final BookContents mContents;
 
-    public ContentsAdapter(final Activity activity, final BookContents contents) {
+    public ContentsAdapter(final Activity activity,
+                           final BookContents contents) {
         super(activity.getFragmentManager());
         mContents = contents;
     }
