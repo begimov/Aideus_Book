@@ -68,7 +68,7 @@ public class ModelFragment extends Fragment {
 
         private Context context = null;
 
-        LoadThread (Context context) {
+        LoadThread (final Context context) {
             super();
             this.context = context.getApplicationContext();
         }
