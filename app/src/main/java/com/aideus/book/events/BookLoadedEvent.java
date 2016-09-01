@@ -6,7 +6,7 @@ public class BookLoadedEvent {
 
     private BookContents mContents = null;
 
-    public BookLoadedEvent(BookContents contents) {
+    public BookLoadedEvent(final BookContents contents) {
         mContents = contents;
     }
 
