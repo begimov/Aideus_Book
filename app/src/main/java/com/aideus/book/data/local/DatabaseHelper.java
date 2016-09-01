@@ -25,19 +25,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return (sSingleton);
     }
 
-    private DatabaseHelper(final Context context) {
+    private DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, SCHEMA_VERSION);
     }
 
     @Override
-    public void onCreate(final SQLiteDatabase db) {
+    public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE notes (position INTEGER PRIMARY KEY, prose TEXT)");
     }
 
     @Override
-    public void onUpgrade(final SQLiteDatabase db,
-                          final int oldVersion,
-                          final int newVersion) {
+    public void onUpgrade(SQLiteDatabase db,
+                          int oldVersion,
+                          int newVersion) {
         throw new RuntimeException("This should not be called");
     }
 
