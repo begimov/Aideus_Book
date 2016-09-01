@@ -12,6 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ShareActionProvider;
 
@@ -56,6 +57,16 @@ public class NoteFragment extends Fragment implements TextWatcher {
         View result = inflater.inflate(R.layout.editor, container, false);
         mEditor = (EditText) result.findViewById(R.id.editor);
         mEditor.addTextChangedListener(this);
+
+        Button buttonSave = (Button) result.findViewById(R.id.btn_editor_save);
+
+        buttonSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getContract().closeNotes();
+            }
+        });
+
         return (result);
     }
 
