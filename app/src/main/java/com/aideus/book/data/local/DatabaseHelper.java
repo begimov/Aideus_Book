@@ -18,32 +18,34 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static DatabaseHelper sSingleton = null;
 
-    public synchronized static DatabaseHelper getInstance(Context context) {
+    public synchronized static DatabaseHelper getInstance(final Context context) {
         if (sSingleton == null) {
             sSingleton = new DatabaseHelper(context.getApplicationContext());
         }
         return (sSingleton);
     }
 
-    private DatabaseHelper(Context context) {
+    private DatabaseHelper(final Context context) {
         super(context, DATABASE_NAME, null, SCHEMA_VERSION);
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
+    public void onCreate(final SQLiteDatabase db) {
         db.execSQL("CREATE TABLE notes (position INTEGER PRIMARY KEY, prose TEXT)");
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public void onUpgrade(final SQLiteDatabase db,
+                          final int oldVersion,
+                          final int newVersion) {
         throw new RuntimeException("This should not be called");
     }
 
-    public void loadNote(int position) {
+    public void loadNote(final int position) {
         new LoadThread(position).start();
     }
 
-    public void updateNote(int position, String prose) {
+    public void updateNote(final int position, final String prose) {
         new UpdateThread(position, prose).start();
     }
 
@@ -51,7 +53,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         private int position = -1;
 
-        LoadThread(int position) {
+        LoadThread(final int position) {
             super();
             this.position = position;
         }
@@ -76,7 +78,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         private String prose = null;
 
-        UpdateThread(int position, String prose) {
+        UpdateThread(final int position, final String prose) {
             super();
             this.position = position;
             this.prose = prose;
