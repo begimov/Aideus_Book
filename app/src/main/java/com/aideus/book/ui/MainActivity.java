@@ -34,6 +34,10 @@ import org.greenrobot.eventbus.ThreadMode;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String FILE_ASSET_MISC_ABOUT_URI = "file:///android_asset/misc/about.html";
+
+    private static final String FILE_ASSET_MISC_CONTACTS_URI = "file:///android_asset/misc/contacts.html";
+
     private ViewPager mPager = null;
 
     private ContentsAdapter mAdapter = null;
@@ -168,14 +172,14 @@ public class MainActivity extends AppCompatActivity {
                             case 2:
                                 Intent i = new Intent(getBaseContext(), SimpleContentActivity.class)
                                         .putExtra(SimpleContentActivity.EXTRA_FILE,
-                                                "file:///android_asset/misc/about.html");
+                                                FILE_ASSET_MISC_ABOUT_URI);
                                 startActivity(i);
                                 mDrawer.closeDrawer();
                                 return (true);
                             case 3:
                                 i = new Intent(getBaseContext(), SimpleContentActivity.class)
                                         .putExtra(SimpleContentActivity.EXTRA_FILE,
-                                                "file:///android_asset/misc/contacts.html");
+                                                FILE_ASSET_MISC_CONTACTS_URI);
                                 startActivity(i);
                                 mDrawer.closeDrawer();
                                 return (true);
