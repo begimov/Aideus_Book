@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
@@ -150,15 +151,46 @@ public class MainActivity extends AppCompatActivity {
                 .withActivity(this)
                 .withHeaderBackground(R.drawable.material_drawer_badge)
                 .build();
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.book).withIcon(GoogleMaterial.Icon.gmd_book);
-        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(2).withName(R.string.about).withSelectable(false).withIcon(GoogleMaterial.Icon.gmd_info);
-        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(3).withName(R.string.contacts).withSelectable(false).withIcon(GoogleMaterial.Icon.gmd_contacts);
-        PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(4).withName(R.string.settings).withSelectable(false).withIcon(GoogleMaterial.Icon.gmd_settings);
+
+        //TODO auto drawer items creation
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem()
+                .withIdentifier(1)
+                .withName(R.string.book)
+                .withIcon(GoogleMaterial.Icon.gmd_book);
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem()
+                .withIdentifier(2)
+                .withName(R.string.about)
+                .withSelectable(false)
+                .withIcon(GoogleMaterial.Icon.gmd_info);
+        PrimaryDrawerItem item3 = new PrimaryDrawerItem()
+                .withIdentifier(3)
+                .withName(R.string.contacts)
+                .withSelectable(false)
+                .withIcon(GoogleMaterial.Icon.gmd_contacts);
+        PrimaryDrawerItem item4 = new PrimaryDrawerItem()
+                .withIdentifier(4)
+                .withName(R.string.settings)
+                .withSelectable(false)
+                .withIcon(GoogleMaterial.Icon.gmd_settings);
+
+        buildPrimaryNavigationDrawer(headerResult, item1, item2, item3, item4);
+
+        buildSecondaryNavigationDrawer(contents);
+
+        lockNavigationDrawerClosed();
+    }
+
+    private void buildPrimaryNavigationDrawer(final AccountHeader headerResult,
+                                              final PrimaryDrawerItem item1,
+                                              final PrimaryDrawerItem item2,
+                                              final PrimaryDrawerItem item3,
+                                              final PrimaryDrawerItem item4) {
         mDrawer = new DrawerBuilder()
                 .withAccountHeader(headerResult)
                 .withActivity(this)
                 .withToolbar(mToolbar)
                 .addDrawerItems(
+                        //TODO auto drawer items adding
                         item1,
                         item2,
                         item3,
@@ -169,6 +201,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         switch (position) {
+                            //TODO auto drawer items position ids parsing
                             case 2:
                                 Intent i = new Intent(getBaseContext(), SimpleContentActivity.class)
                                         .putExtra(SimpleContentActivity.EXTRA_FILE,
@@ -195,9 +228,11 @@ public class MainActivity extends AppCompatActivity {
                 .withOnDrawerListener(new Drawer.OnDrawerListener() {
                     @Override
                     public void onDrawerOpened(View drawerView) {
+                        unlockNavigationDrawer();
                     }
                     @Override
                     public void onDrawerClosed(View drawerView) {
+                        lockNavigationDrawerClosed();
                     }
                     @Override
                     public void onDrawerSlide(View drawerView, float slideOffset) {
@@ -205,6 +240,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .build();
+    }
+
+    private void buildSecondaryNavigationDrawer(final BookContents contents) {
         mDrawerContents = new DrawerBuilder()
                 .withActivity(this)
                 .withDrawerGravity(Gravity.END)
@@ -218,7 +256,10 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .append(mDrawer);
         for (int i = 0; i < contents.getChapterCount(); i++) {
-            PrimaryDrawerItem primaryDrawerItem = new PrimaryDrawerItem().withIdentifier(i).withName(contents.getChapterTitle(i)).withIcon(GoogleMaterial.Icon.gmd_book);
+            PrimaryDrawerItem primaryDrawerItem = new PrimaryDrawerItem()
+                    .withIdentifier(i)
+                    .withName(contents.getChapterTitle(i))
+                    .withIcon(GoogleMaterial.Icon.gmd_book);
             mDrawerContents.addItem(primaryDrawerItem);
         }
     }
@@ -247,5 +288,15 @@ public class MainActivity extends AppCompatActivity {
             builder.penaltyFlashScreen();
         }
         StrictMode.setThreadPolicy(builder.build());
+    }
+
+    private void lockNavigationDrawerClosed() {
+        mDrawer.getDrawerLayout()
+                .setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+    }
+
+    private void unlockNavigationDrawer() {
+        mDrawer.getDrawerLayout()
+                .setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
     }
 }
