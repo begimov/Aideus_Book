@@ -36,7 +36,7 @@ public class NoteFragment extends Fragment implements TextWatcher {
 
     private Intent mShareIntent = new Intent(Intent.ACTION_SEND).setType("text/plain");
 
-    public static NoteFragment newInstance(int position) {
+    public static NoteFragment newInstance(final int position) {
         NoteFragment frag = new NoteFragment();
         Bundle args = new Bundle();
         args.putInt(KEY_POSITION, position);
