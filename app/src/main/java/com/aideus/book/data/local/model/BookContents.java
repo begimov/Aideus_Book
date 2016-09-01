@@ -7,6 +7,7 @@ import java.util.List;
 
 public class BookContents {
 
+    private static final String FILE_BOOK_LOCAL_ASSET_URI = "file:///android_asset/book/";
     private List<BookContents.Chapter> chapters;
 
     private File baseDir = null;
@@ -30,7 +31,7 @@ public class BookContents {
     public String getChapterPath(final int position) {
         String file = getChapterFile(position);
         if (baseDir == null) {
-            return ("file:///android_asset/book/" + file);
+            return (FILE_BOOK_LOCAL_ASSET_URI + file);
         }
         return (Uri.fromFile(new File(baseDir, file)).toString());
     }
