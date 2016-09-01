@@ -12,12 +12,12 @@
         "source": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
-        "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\abc_list_menu_item_icon.xml"
-    },
-    {
         "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
         "source": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
         "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
@@ -216,12 +216,12 @@
         "source": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\exploded-aar\\com.mikepenz\\materialdrawer\\5.4.0\\res\\layout\\material_drawer_item_mini.xml"
     },
     {
-        "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
-        "source": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\abc_popup_menu_header_item_layout.xml"
-    },
-    {
         "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\layout\\preference_slider.xml",
         "source": "D:\\AndroidApps\\Aideus_Book\\app\\src\\main\\res\\layout\\preference_slider.xml"
+    },
+    {
+        "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
+        "source": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.1.1\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
     {
         "merged": "D:\\AndroidApps\\Aideus_Book\\app\\build\\intermediates\\res\\merged\\debug\\layout\\material_drawer_item_secondary_switch.xml",

@@ -15,7 +15,7 @@ public class SimpleContentActivity extends Activity {
         super.onCreate(savedInstanceState);
         if (getFragmentManager().findFragmentById(android.R.id.content) == null) {
             String file = getIntent().getStringExtra(EXTRA_FILE);
-            Fragment f = SimpleContentFragment.newInstance(file);
+            Fragment f = SimpleContentFragment.newInstance(file, this);
             getFragmentManager().beginTransaction()
                     .add(android.R.id.content, f).commit();
         }

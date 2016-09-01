@@ -11,15 +11,18 @@ public class ContentsAdapter extends FragmentStatePagerAdapter {
 
     private final BookContents mContents;
 
+    private final Activity mActivity;
+
     public ContentsAdapter(final Activity activity,
                            final BookContents contents) {
         super(activity.getFragmentManager());
         mContents = contents;
+        mActivity = activity;
     }
 
     @Override
     public Fragment getItem(final int position) {
-        return (SimpleContentFragment.newInstance(mContents.getChapterPath(position)));
+        return (SimpleContentFragment.newInstance(mContents.getChapterPath(position), mActivity));
     }
 
     @Override

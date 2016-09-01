@@ -1,6 +1,7 @@
 package com.aideus.book.ui.fragments;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -10,19 +11,33 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebViewFragment;
 
+import com.aideus.book.events.FontSizeChangedEvent;
+
+import org.greenrobot.eventbus.EventBus;
+
 public class SimpleContentFragment extends WebViewFragment {
+
+    private static final String PREF_FONT_SIZE = "fontSize";
 
     private static final String KEY_FILE="file";
 
     private static final String WEB_VIEW_DEFAULT_ENCODING = "utf-8";
 
-    public static final String PREF_FONT_SIZE = "fontSize";
+    private static int mFontSize = 16;
 
-    public static SimpleContentFragment newInstance(final String file) {
+    public static SimpleContentFragment newInstance(final String file, Context context) {
         SimpleContentFragment f = new SimpleContentFragment();
         Bundle args = new Bundle();
         args.putString(KEY_FILE, file);
         f.setArguments(args);
+
+        //TODO Use separated PreferenceHelper class, change with TODO in ModelFragment
+        //TODO optimize not accessing Preferences every time instance been created
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        if (prefs != null) {
+            mFontSize = prefs.getInt(PREF_FONT_SIZE, 16);
+        }
+
         return(f);
     }
 
@@ -47,13 +62,9 @@ public class SimpleContentFragment extends WebViewFragment {
         webSettings.setBuiltInZoomControls(false);
 
         //TODO Dynamic text size with ui controls
-//        webSettings.setTextZoom(webSettings.getTextZoom() + 10);
-        //TODO Use separated PreferenceHelper class, change with TODO in ModelFragment
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        if (prefs != null) {
-            webSettings.setDefaultFontSize(prefs.getInt(PREF_FONT_SIZE, 16));
-            //TODO Update font size in webview and/or pager
-        }
+        webSettings.setDefaultFontSize(mFontSize);
+        //TODO Update font size in webview and/or pager
+
         getWebView().loadUrl(getPage());
         return(result);
     }

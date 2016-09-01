@@ -12,6 +12,7 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.aideus.book.BuildConfig;
 import com.aideus.book.R;
@@ -20,6 +21,7 @@ import com.aideus.book.data.local.ContentsAdapter;
 import com.aideus.book.data.local.ModelFragment;
 import com.aideus.book.events.BookLoadedEvent;
 import com.aideus.book.data.remote.DownloadCheckService;
+import com.aideus.book.events.FontSizeChangedEvent;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
@@ -92,6 +94,10 @@ public class MainActivity extends AppCompatActivity {
                 setupDrawer(mFrag.getBook());
             }
         }
+        //TODO WTF is going on? Refresh pager only if font size changed
+        if (mFrag != null && mFrag.getBook() != null) {
+            setupPager(mFrag.getBook());
+        }
     }
 
     @Override
@@ -138,12 +144,7 @@ public class MainActivity extends AppCompatActivity {
         mPager.setVisibility(View.VISIBLE);
         mToolbar.setVisibility(View.VISIBLE);
         mPager.setKeepScreenOn(true);
-        SharedPreferences prefs = mFrag.getPrefs();
-        if (prefs != null) {
-            if (prefs.getBoolean(PREF_SAVE_LAST_POSITION, true)) {
-                mPager.setCurrentItem(prefs.getInt(PREF_LAST_POSITION, 0));
-            }
-        }
+        getPrefLastPosition();
     }
 
     private void setupDrawer(final BookContents contents) {
@@ -269,6 +270,15 @@ public class MainActivity extends AppCompatActivity {
             int position = mPager.getCurrentItem();
             mFrag.getPrefs().edit().putInt(PREF_LAST_POSITION, position)
                     .apply();
+        }
+    }
+
+    private void getPrefLastPosition() {
+        SharedPreferences prefs = mFrag.getPrefs();
+        if (prefs != null) {
+            if (prefs.getBoolean(PREF_SAVE_LAST_POSITION, true)) {
+                mPager.setCurrentItem(prefs.getInt(PREF_LAST_POSITION, 0));
+            }
         }
     }
 
