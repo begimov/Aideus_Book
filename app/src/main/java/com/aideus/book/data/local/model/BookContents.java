@@ -8,6 +8,7 @@ import java.util.List;
 public class BookContents {
 
     private static final String FILE_BOOK_LOCAL_ASSET_URI = "file:///android_asset/book/";
+
     private List<BookContents.Chapter> chapters;
 
     private File baseDir = null;
