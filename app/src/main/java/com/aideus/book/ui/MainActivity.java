@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void setupPager(BookContents contents) {
+    private void setupPager(final BookContents contents) {
         mAdapter = new ContentsAdapter(this, contents);
         mPager.setAdapter(mAdapter);
         findViewById(R.id.progressBar1).setVisibility(View.GONE);
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void setupDrawer(BookContents contents) {
+    private void setupDrawer(final BookContents contents) {
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
                 .withHeaderBackground(R.drawable.material_drawer_badge)
