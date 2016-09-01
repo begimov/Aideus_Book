@@ -14,7 +14,7 @@ public class SimpleContentFragment extends WebViewFragment {
 
     private static final String WEB_VIEW_DEFAULT_ENCODING = "utf-8";
 
-    public static SimpleContentFragment newInstance(String file) {
+    public static SimpleContentFragment newInstance(final String file) {
         SimpleContentFragment f = new SimpleContentFragment();
         Bundle args = new Bundle();
         args.putString(KEY_FILE, file);
