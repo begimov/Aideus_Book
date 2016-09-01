@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
 import android.webkit.WebViewFragment;
 
 public class SimpleContentFragment extends WebViewFragment {
@@ -32,10 +33,16 @@ public class SimpleContentFragment extends WebViewFragment {
                              Bundle savedInstanceState) {
         View result=
                 super.onCreateView(inflater, container, savedInstanceState);
-        getWebView().getSettings().setDefaultTextEncodingName("utf-8");
-        getWebView().getSettings().setJavaScriptEnabled(true);
-        getWebView().getSettings().setSupportZoom(true);
-        getWebView().getSettings().setBuiltInZoomControls(true);
+
+        WebSettings settings = getWebView().getSettings();
+        settings.setDefaultTextEncodingName("utf-8");
+        settings.setJavaScriptEnabled(true);
+        settings.setSupportZoom(false);
+        settings.setBuiltInZoomControls(false);
+
+        //TODO Dynamic text size with ui controls
+        settings.setTextZoom(settings.getTextZoom() + 10);
+
         getWebView().loadUrl(getPage());
         return(result);
     }
