@@ -13,10 +13,6 @@ public class BookContents {
 
     private File baseDir = null;
 
-    private String getChapterFile(final int position) {
-        return(chapters.get(position).file);
-    }
-
     public int getChapterCount() {
         return(chapters.size());
     }
@@ -35,6 +31,10 @@ public class BookContents {
             return (FILE_BOOK_LOCAL_ASSET_URI + file);
         }
         return (Uri.fromFile(new File(baseDir, file)).toString());
+    }
+
+    private String getChapterFile(final int position) {
+        return(chapters.get(position).file);
     }
 
     private static class Chapter {
