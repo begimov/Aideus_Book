@@ -13,10 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.aideus.book.BuildConfig;
-import com.aideus.book.R;
 import com.aideus.book.data.local.ContentsAdapter;
-import com.aideus.book.data.local.ModelFragment;
+import com.aideus.book.data.ModelFragment;
 import com.aideus.book.data.local.model.BookContents;
 import com.aideus.book.data.remote.DownloadCheckService;
 import com.aideus.book.events.BookLoadedEvent;
@@ -130,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                 return (true);
             case R.id.update:
                 setPrefLastPosition();
-                startService(new Intent(this, DownloadCheckService.class));
+                mFrag.startDownloadCheckService(this);
                 return (true);
         }
         return super.onOptionsItemSelected(item);

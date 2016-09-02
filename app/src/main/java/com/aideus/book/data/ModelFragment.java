@@ -1,8 +1,9 @@
-package com.aideus.book.data.local;
+package com.aideus.book.data;
 
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Process;
@@ -59,6 +60,10 @@ public class ModelFragment extends Fragment {
 
     synchronized public SharedPreferences getPrefs() {
         return (mPrefs);
+    }
+
+    public void startDownloadCheckService(Context context) {
+        context.startService(new Intent(context, DownloadCheckService.class));
     }
 
     private class LoadThread extends Thread {
