@@ -31,7 +31,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.aideus.book.ui.MainActivity" />
+        <activity android:name="com.aideus.book.MainActivity" />
         <activity android:name="com.aideus.book.ui.SimpleContentActivity" />
         <activity android:name="com.aideus.book.ui.PreferencesActivity" />
         <activity

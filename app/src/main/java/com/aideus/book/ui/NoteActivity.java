@@ -9,7 +9,7 @@ import com.aideus.book.ui.fragments.NoteFragment;
 
 public class NoteActivity extends Activity implements NoteFragment.Contract {
 
-    static final String EXTRA_POSITION = "position";
+    public static final String EXTRA_POSITION = "position";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

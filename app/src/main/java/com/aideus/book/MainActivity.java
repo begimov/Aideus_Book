@@ -1,4 +1,4 @@
-package com.aideus.book.ui;
+package com.aideus.book;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -20,6 +20,9 @@ import com.aideus.book.data.local.ModelFragment;
 import com.aideus.book.data.local.model.BookContents;
 import com.aideus.book.data.remote.DownloadCheckService;
 import com.aideus.book.events.BookLoadedEvent;
+import com.aideus.book.ui.NoteActivity;
+import com.aideus.book.ui.PreferencesActivity;
+import com.aideus.book.ui.SimpleContentActivity;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
@@ -39,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String FILE_ASSET_MISC_CONTACTS_URI = "file:///android_asset/misc/contacts.html";
 
+    private static final String MODEL = "model";
+
+    private static final String PREF_LAST_POSITION = "lastPosition";
+
+    private static final String PREF_SAVE_LAST_POSITION = "saveLastPosition";
+
     private ViewPager mPager = null;
 
     private ContentsAdapter mAdapter = null;
@@ -51,13 +60,6 @@ public class MainActivity extends AppCompatActivity {
 
     private Drawer mDrawerContents = null;
 
-    private static final String MODEL = "model";
-
-    private static final String PREF_LAST_POSITION = "lastPosition";
-
-    private static final String PREF_SAVE_LAST_POSITION = "saveLastPosition";
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,18 +71,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.options, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
     protected void onResume() {
         super.onResume();
         EventBus.getDefault().register(this);
         if (mAdapter == null) {
-            mFrag =
-                    (ModelFragment) getFragmentManager().findFragmentByTag(MODEL);
+            mFrag = (ModelFragment) getFragmentManager().findFragmentByTag(MODEL);
             if (mFrag == null) {
                 mFrag = new ModelFragment();
                 getFragmentManager()
@@ -99,6 +94,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause() {
+        EventBus.getDefault().unregister(this);
+        setPrefLastPosition();
+        super.onPause();
+    }
+
+    @Override
     public void onBackPressed() {
         if (mDrawer != null && mDrawer.isDrawerOpen()) {
             mDrawer.closeDrawer();
@@ -110,10 +112,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onPause() {
-        EventBus.getDefault().unregister(this);
-        setPrefLastPosition();
-        super.onPause();
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.options, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override

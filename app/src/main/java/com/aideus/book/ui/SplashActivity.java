@@ -10,6 +10,7 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.Window;
 
+import com.aideus.book.MainActivity;
 import com.aideus.book.R;
 
 public class SplashActivity extends Activity {

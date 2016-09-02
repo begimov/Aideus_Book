@@ -106,10 +106,10 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
 		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:25:27-74
-activity#com.aideus.book.ui.MainActivity
-ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:29:9-53
+activity#com.aideus.book.MainActivity
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:29:9-50
 	android:name
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:29:19-50
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:29:19-47
 activity#com.aideus.book.ui.SimpleContentActivity
 ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:30:9-62
 	android:name

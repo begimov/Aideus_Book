@@ -8,7 +8,7 @@ import com.aideus.book.ui.fragments.SimpleContentFragment;
 
 public class SimpleContentActivity extends Activity {
 
-    static final String EXTRA_FILE = "file";
+    public static final String EXTRA_FILE = "file";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
