@@ -54,11 +54,11 @@ public class NoteFragment extends Fragment implements TextWatcher {
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,
                              Bundle savedInstanceState) {
-        View result = inflater.inflate(R.layout.editor, container, false);
-        mEditor = (EditText) result.findViewById(R.id.editor);
+        View result = inflater.inflate(R.layout.note_fragment, container, false);
+        mEditor = (EditText) result.findViewById(R.id.et_note);
         mEditor.addTextChangedListener(this);
 
-        Button buttonSave = (Button) result.findViewById(R.id.btn_editor_save);
+        Button buttonSave = (Button) result.findViewById(R.id.btn_note_save);
 
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
