@@ -16,6 +16,6 @@
         android:id="@+id/tv_TextSizeExample"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Пример текста"/>
+        android:text="@string/font_size_text_example"/>
 
 </LinearLayout>
