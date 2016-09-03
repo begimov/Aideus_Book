@@ -13,7 +13,7 @@ public class BookContents {
 
     private File baseDir = null;
 
-    public int getChapterCount() {
+    public int getChaptersCount() {
         return(chapters.size());
     }
 

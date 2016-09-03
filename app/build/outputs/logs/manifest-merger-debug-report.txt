@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:2:1-41:12
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:2:1-42:12
 	package
 		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:3:5-30
 		INJECTED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml
@@ -28,7 +28,7 @@ ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:7:5-11:40
 	android:xlargeScreens
 		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:11:9-37
 application
-ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:13:5-39:19
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:13:5-40:19
 MERGED from [com.android.support:support-v13:23.4.0] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v13\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:appcompat-v7:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\AndroidManifest.xml:25:5-20
@@ -81,55 +81,57 @@ MERGED from [com.android.support:support-vector-drawable:24.1.1] D:\AndroidApps\
 MERGED from [com.android.support:support-v4:24.1.1] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
 MERGED from [com.mikepenz:google-material-typeface:2.2.0.3.original] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.mikepenz\google-material-typeface\2.2.0.3.original\AndroidManifest.xml:27:5-20
 	android:label
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:16:9-41
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:17:9-41
 	android:allowBackup
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:14:9-36
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:15:9-36
 	android:icon
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:15:9-43
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:16:9-43
 	android:theme
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:17:9-40
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:18:9-40
+	android:name
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:14:9-46
 activity#com.aideus.book.ui.SplashActivity
-ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:19:9-27:20
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:20:9-28:20
 	android:label
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:21:13-45
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:22:13-45
 	android:noHistory
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:22:13-37
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:23:13-37
 	android:name
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:20:13-46
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:21:13-46
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:23:13-26:29
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:24:13-27:29
 action#android.intent.action.MAIN
-ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:24:17-69
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:24:25-66
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:25:17-77
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:25:27-74
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:26:27-74
 activity#com.aideus.book.MainActivity
-ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:29:9-50
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:30:9-50
 	android:name
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:29:19-47
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:30:19-47
 activity#com.aideus.book.ui.SimpleContentActivity
-ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:30:9-62
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:31:9-62
 	android:name
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:30:19-59
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:31:19-59
 activity#com.aideus.book.ui.PreferencesActivity
-ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:31:9-60
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:32:9-60
 	android:name
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:31:19-57
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:32:19-57
 activity#com.aideus.book.ui.NoteActivity
-ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:32:9-34:77
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:33:9-35:77
 	android:theme
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:34:13-74
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:35:13-74
 	android:name
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:33:13-44
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:34:13-44
 service#com.aideus.book.data.remote.DownloadCheckService
-ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:36:9-38:40
+ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:37:9-39:40
 	android:exported
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:38:13-37
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:39:13-37
 	android:name
-		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:37:13-61
+		ADDED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml:38:13-61
 uses-sdk
 INJECTED from D:\AndroidApps\Aideus_Book\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:support-v13:23.4.0] D:\AndroidApps\Aideus_Book\app\build\intermediates\exploded-aar\com.android.support\support-v13\23.4.0\AndroidManifest.xml:20:5-44

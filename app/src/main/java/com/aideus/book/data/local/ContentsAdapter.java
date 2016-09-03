@@ -4,29 +4,28 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.support.v13.app.FragmentStatePagerAdapter;
 
-import com.aideus.book.data.local.model.BookContents;
-import com.aideus.book.ui.fragments.SimpleContentFragment;
+import com.aideus.book.data.ModelFragment;
 
 public class ContentsAdapter extends FragmentStatePagerAdapter {
 
-    private final BookContents mContents;
+    private final ModelFragment mFrag;
 
     private final Activity mActivity;
 
-    public ContentsAdapter(final Activity activity,
-                           final BookContents contents) {
+    public ContentsAdapter(final ModelFragment modelFragment,
+                           final Activity activity) {
         super(activity.getFragmentManager());
-        mContents = contents;
+        mFrag = modelFragment;
         mActivity = activity;
     }
 
     @Override
     public Fragment getItem(final int position) {
-        return (SimpleContentFragment.newInstance(mContents.getChapterPath(position), mActivity));
+        return (mFrag.getSimpleContentFragment(position, mActivity));
     }
 
     @Override
     public int getCount() {
-        return (mContents.getChapterCount());
+        return (mFrag.getChaptersCount());
     }
 }

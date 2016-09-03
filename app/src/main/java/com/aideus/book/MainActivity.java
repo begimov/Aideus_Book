@@ -1,9 +1,7 @@
 package com.aideus.book;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +14,6 @@ import android.view.View;
 import com.aideus.book.data.local.ContentsAdapter;
 import com.aideus.book.data.ModelFragment;
 import com.aideus.book.data.local.model.BookContents;
-import com.aideus.book.data.remote.DownloadCheckService;
 import com.aideus.book.events.BookLoadedEvent;
 import com.aideus.book.ui.NoteActivity;
 import com.aideus.book.ui.PreferencesActivity;
@@ -42,10 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String MODEL = "model";
 
-    private static final String PREF_LAST_POSITION = "lastPosition";
-
-    private static final String PREF_SAVE_LAST_POSITION = "saveLastPosition";
-
     private ViewPager mPager = null;
 
     private ContentsAdapter mAdapter = null;
@@ -60,91 +53,168 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setupStrictMode();
+
         setContentView(R.layout.main);
+
         mToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+
         setSupportActionBar(mToolbar);
+
         mPager = (ViewPager) findViewById(R.id.pager);
+
     }
 
     @Override
     protected void onResume() {
+
         super.onResume();
+
         EventBus.getDefault().register(this);
+
         if (mAdapter == null) {
-            mFrag = (ModelFragment) getFragmentManager().findFragmentByTag(MODEL);
+
+            mFrag = (ModelFragment) getFragmentManager()
+                    .findFragmentByTag(MODEL);
+
             if (mFrag == null) {
+
                 mFrag = new ModelFragment();
+
                 getFragmentManager()
                         .beginTransaction()
                         .add(mFrag, MODEL)
                         .commit();
+
             } else if (mFrag.getBook() != null) {
-                setupPager(mFrag.getBook());
-                setupDrawer(mFrag.getBook());
+
+                setupPager();
+
+                setupDrawer();
+
             }
+
+
+        } else {
+
+            //TODO Refresh pager only if font size changed
+            //TODO Find other way to refresh pager content
+            mPager.setAdapter(mAdapter);
+
+            setPagerCurrentItem();
+
         }
-        //TODO WTF is going on? Refresh pager only if font size changed
-        if (mFrag != null && mFrag.getBook() != null) {
-            setupPager(mFrag.getBook());
-        }
+
     }
 
     @Override
     protected void onPause() {
+
         EventBus.getDefault().unregister(this);
+
         setPrefLastPosition();
+
         super.onPause();
+
     }
 
     @Override
     public void onBackPressed() {
+
         if (mDrawer != null && mDrawer.isDrawerOpen()) {
+
             mDrawer.closeDrawer();
+
         } else if (mDrawerContents != null && mDrawerContents.isDrawerOpen()) {
+
             mDrawerContents.closeDrawer();
+
         } else {
+
             super.onBackPressed();
+
         }
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         getMenuInflater().inflate(R.menu.options, menu);
+
         return super.onCreateOptionsMenu(menu);
+
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         switch (item.getItemId()) {
+
             case R.id.notes:
+
                 Intent i = new Intent(this, NoteActivity.class);
+
                 i.putExtra(NoteActivity.EXTRA_POSITION, mPager.getCurrentItem());
+
                 startActivity(i);
-                return (true);
+
+                return true;
+
             case R.id.contents:
+
                 mDrawerContents.openDrawer();
-                return (true);
+
+                return true;
+
             case R.id.update:
+
                 setPrefLastPosition();
+
                 mFrag.startDownloadCheckService(this);
-                return (true);
+
+                return true;
+
         }
+
         return super.onOptionsItemSelected(item);
+
     }
 
-    private void setupPager(final BookContents contents) {
-        mAdapter = new ContentsAdapter(this, contents);
+        private void setupPager() {
+
+        //TODO Data Adapter in Activity!
+        mAdapter = new ContentsAdapter(mFrag, this);
+
         mPager.setAdapter(mAdapter);
+
         findViewById(R.id.progressBar1).setVisibility(View.GONE);
+
         mPager.setVisibility(View.VISIBLE);
+
         mToolbar.setVisibility(View.VISIBLE);
+
         mPager.setKeepScreenOn(true);
-        getPrefLastPosition();
+
+        setPagerCurrentItem();
+
     }
 
-    private void setupDrawer(final BookContents contents) {
+    private void setPrefLastPosition() {
+
+        mFrag.setPrefLastPosition(mPager.getCurrentItem());
+
+    }
+
+    private void setPagerCurrentItem() {
+
+        mPager.setCurrentItem(mFrag.getPrefLastPosition());
+
+    }
+
+    private void setupDrawer() {
+
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
                 .withHeaderBackground(R.drawable.material_drawer_badge)
@@ -155,16 +225,19 @@ public class MainActivity extends AppCompatActivity {
                 .withIdentifier(1)
                 .withName(R.string.book)
                 .withIcon(GoogleMaterial.Icon.gmd_book);
+
         PrimaryDrawerItem item2 = new PrimaryDrawerItem()
                 .withIdentifier(2)
                 .withName(R.string.about)
                 .withSelectable(false)
                 .withIcon(GoogleMaterial.Icon.gmd_info);
+
         PrimaryDrawerItem item3 = new PrimaryDrawerItem()
                 .withIdentifier(3)
                 .withName(R.string.contacts)
                 .withSelectable(false)
                 .withIcon(GoogleMaterial.Icon.gmd_contacts);
+
         PrimaryDrawerItem item4 = new PrimaryDrawerItem()
                 .withIdentifier(4)
                 .withName(R.string.settings)
@@ -173,9 +246,10 @@ public class MainActivity extends AppCompatActivity {
 
         buildPrimaryNavigationDrawer(headerResult, item1, item2, item3, item4);
 
-        buildSecondaryNavigationDrawer(contents);
+        buildSecondaryNavigationDrawer();
 
         lockNavigationDrawerClosed();
+
     }
 
     private void buildPrimaryNavigationDrawer(final AccountHeader headerResult,
@@ -183,44 +257,44 @@ public class MainActivity extends AppCompatActivity {
                                               final PrimaryDrawerItem item2,
                                               final PrimaryDrawerItem item3,
                                               final PrimaryDrawerItem item4) {
+
         mDrawer = new DrawerBuilder()
                 .withAccountHeader(headerResult)
                 .withActivity(this)
                 .withToolbar(mToolbar)
+                //TODO auto drawer items adding
                 .addDrawerItems(
-                        //TODO auto drawer items adding
                         item1,
                         item2,
                         item3,
                         item4,
-                        new DividerDrawerItem()
-                )
+                        new DividerDrawerItem())
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         switch (position) {
                             //TODO auto drawer items position ids parsing
                             case 2:
-                                Intent i = new Intent(getBaseContext(), SimpleContentActivity.class)
+                                Intent i = new Intent(getApplicationContext(), SimpleContentActivity.class)
                                         .putExtra(SimpleContentActivity.EXTRA_FILE,
                                                 FILE_ASSET_MISC_ABOUT_URI);
                                 startActivity(i);
                                 mDrawer.closeDrawer();
-                                return (true);
+                                return true;
                             case 3:
-                                i = new Intent(getBaseContext(), SimpleContentActivity.class)
+                                i = new Intent(getApplicationContext(), SimpleContentActivity.class)
                                         .putExtra(SimpleContentActivity.EXTRA_FILE,
                                                 FILE_ASSET_MISC_CONTACTS_URI);
                                 startActivity(i);
                                 mDrawer.closeDrawer();
-                                return (true);
+                                return true;
                             case 4:
-                                i = new Intent(getBaseContext(), PreferencesActivity.class);
+                                i = new Intent(getApplicationContext(), PreferencesActivity.class);
                                 startActivity(i);
                                 mDrawer.closeDrawer();
-                                return (true);
+                                return true;
                         }
-                        return (true);
+                        return true;
                     }
                 })
                 .withOnDrawerListener(new Drawer.OnDrawerListener() {
@@ -238,9 +312,11 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
                 .build();
+
     }
 
-    private void buildSecondaryNavigationDrawer(final BookContents contents) {
+    private void buildSecondaryNavigationDrawer() {
+
         mDrawerContents = new DrawerBuilder()
                 .withActivity(this)
                 .withDrawerGravity(Gravity.END)
@@ -249,61 +325,47 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         mPager.setCurrentItem(position);
                         mDrawerContents.closeDrawer();
-                        return (true);
+                        return true;
                     }
                 })
                 .append(mDrawer);
-        for (int i = 0; i < contents.getChapterCount(); i++) {
+
+        for (int i = 0; i < mFrag.getChaptersCount(); i++) {
+
             PrimaryDrawerItem primaryDrawerItem = new PrimaryDrawerItem()
                     .withIdentifier(i)
-                    .withName(contents.getChapterTitle(i))
+                    .withName(mFrag.getChapterTitle(i))
                     .withIcon(GoogleMaterial.Icon.gmd_book);
+
             mDrawerContents.addItem(primaryDrawerItem);
-        }
-    }
 
-    private void setPrefLastPosition() {
-        if (mFrag.getPrefs() != null) {
-            int position = mPager.getCurrentItem();
-            mFrag.getPrefs().edit().putInt(PREF_LAST_POSITION, position)
-                    .apply();
         }
-    }
 
-    private void getPrefLastPosition() {
-        SharedPreferences prefs = mFrag.getPrefs();
-        if (prefs != null) {
-            if (prefs.getBoolean(PREF_SAVE_LAST_POSITION, true)) {
-                mPager.setCurrentItem(prefs.getInt(PREF_LAST_POSITION, 0));
-            }
-        }
     }
 
     @SuppressWarnings("unused")
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onEventMainThread(BookLoadedEvent event) {
-        setupPager(event.getBook());
-        setupDrawer(event.getBook());
-    }
 
-    private void setupStrictMode() {
-        StrictMode.ThreadPolicy.Builder builder =
-                new StrictMode.ThreadPolicy.Builder()
-                        .detectAll()
-                        .penaltyLog();
-        if (BuildConfig.DEBUG) {
-            builder.penaltyFlashScreen();
-        }
-        StrictMode.setThreadPolicy(builder.build());
+    @Subscribe(threadMode = ThreadMode.MAIN)
+
+    public void onEventMainThread(BookLoadedEvent event) {
+
+        setupPager();
+
+        setupDrawer();
+
     }
 
     private void lockNavigationDrawerClosed() {
+
         mDrawer.getDrawerLayout()
                 .setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+
     }
 
     private void unlockNavigationDrawer() {
+
         mDrawer.getDrawerLayout()
                 .setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
+
     }
 }

@@ -14,6 +14,7 @@ import com.aideus.book.data.local.model.BookContents;
 import com.aideus.book.data.remote.DownloadCheckService;
 import com.aideus.book.events.BookLoadedEvent;
 import com.aideus.book.events.BookUpdatedEvent;
+import com.aideus.book.ui.fragments.SimpleContentFragment;
 import com.google.gson.Gson;
 
 import org.greenrobot.eventbus.EventBus;
@@ -29,7 +30,11 @@ import java.io.InputStreamReader;
 
 public class ModelFragment extends Fragment {
 
-    private BookContents mContents = null;
+    private static final String PREF_LAST_POSITION = "lastPosition";
+
+    private static final String PREF_SAVE_LAST_POSITION = "saveLastPosition";
+
+    private BookContents mBook = null;
 
     private SharedPreferences mPrefs = null;
 
@@ -43,7 +48,7 @@ public class ModelFragment extends Fragment {
     public void onAttach(Activity host) {
         super.onAttach(host);
         EventBus.getDefault().register(this);
-        if (mContents == null) {
+        if (mBook == null) {
             new LoadThread(host).start();
         }
     }
@@ -55,11 +60,35 @@ public class ModelFragment extends Fragment {
     }
 
     synchronized public BookContents getBook() {
-        return(mContents);
+        return(mBook);
     }
 
-    synchronized public SharedPreferences getPrefs() {
-        return (mPrefs);
+    public void setPrefLastPosition(int position) {
+        if (mPrefs != null) {
+            mPrefs.edit().putInt(PREF_LAST_POSITION, position)
+                    .apply();
+        }
+    }
+
+    public int getPrefLastPosition() {
+        if (mPrefs != null) {
+            if (mPrefs.getBoolean(PREF_SAVE_LAST_POSITION, true)) {
+                return mPrefs.getInt(PREF_LAST_POSITION, 0);
+            }
+        }
+        return 0;
+    }
+
+    public int getChaptersCount() {
+        return mBook.getChaptersCount();
+    }
+
+    public String getChapterTitle(int chapter) {
+        return mBook.getChapterTitle(chapter);
+    }
+
+    public Fragment getSimpleContentFragment(int position, Activity activity) {
+        return SimpleContentFragment.newInstance(mBook.getChapterPath(position), activity);
     }
 
     public void startDownloadCheckService(Context context) {
@@ -99,13 +128,13 @@ public class ModelFragment extends Fragment {
                 BufferedReader reader =
                         new BufferedReader(new InputStreamReader(is));
                 synchronized(this) {
-                    mContents = gson.fromJson(reader, BookContents.class);
+                    mBook = gson.fromJson(reader, BookContents.class);
                 }
                 is.close();
                 if (baseDir.exists()) {
-                    mContents.setBaseDir(baseDir);
+                    mBook.setBaseDir(baseDir);
                 }
-                EventBus.getDefault().post(new BookLoadedEvent(mContents));
+                EventBus.getDefault().post(new BookLoadedEvent());
             }
             catch (IOException e) {
                 Log.e(getClass().getSimpleName(), "Exception parsing JSON", e);
