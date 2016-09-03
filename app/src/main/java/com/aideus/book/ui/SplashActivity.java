@@ -28,6 +28,7 @@ public class SplashActivity extends Activity {
 
         @Override
         protected Void doInBackground(Void... params) {
+            //TODO Data access not using ModelFragment!
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
             boolean firstRun = prefs.getBoolean(PREF_FIRST_RUN, false);
             if (!firstRun) {

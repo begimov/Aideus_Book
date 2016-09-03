@@ -842,7 +842,7 @@ public final class R {
 		public static final int chronometer = 0x7f0d00b1;
 		public static final int collapseActionView = 0x7f0d004c;
 		public static final int contentPanel = 0x7f0d0062;
-		public static final int content_layout = 0x7f0d00a9;
+		public static final int content_layout = 0x7f0d00a7;
 		public static final int custom = 0x7f0d0068;
 		public static final int customPanel = 0x7f0d0067;
 		public static final int decor_content_parent = 0x7f0d0071;
@@ -948,7 +948,7 @@ public final class R {
 		public static final int abc_search_dropdown_item_icons_2line = 0x7f040017;
 		public static final int abc_search_view = 0x7f040018;
 		public static final int abc_select_dialog_material = 0x7f040019;
-		public static final int materialize = 0x7f04003c;
+		public static final int materialize = 0x7f04003b;
 		public static final int notification_media_action = 0x7f04003d;
 		public static final int notification_media_cancel_action = 0x7f04003e;
 		public static final int notification_template_big_media = 0x7f04003f;
@@ -995,17 +995,17 @@ public final class R {
 		public static final int abc_shareactionprovider_share_with_application = 0x7f070011;
 		public static final int abc_toolbar_collapse_description = 0x7f070012;
 		public static final int define_materialize = 0x7f07002f;
-		public static final int library_materialize_author = 0x7f070404;
-		public static final int library_materialize_authorWebsite = 0x7f070405;
-		public static final int library_materialize_isOpenSource = 0x7f070406;
-		public static final int library_materialize_libraryDescription = 0x7f070407;
-		public static final int library_materialize_libraryName = 0x7f070408;
-		public static final int library_materialize_libraryVersion = 0x7f070409;
-		public static final int library_materialize_libraryWebsite = 0x7f07040a;
-		public static final int library_materialize_licenseId = 0x7f07040b;
-		public static final int library_materialize_owner = 0x7f07040c;
-		public static final int library_materialize_repositoryLink = 0x7f07040d;
-		public static final int library_materialize_year = 0x7f07040e;
+		public static final int library_materialize_author = 0x7f070405;
+		public static final int library_materialize_authorWebsite = 0x7f070406;
+		public static final int library_materialize_isOpenSource = 0x7f070407;
+		public static final int library_materialize_libraryDescription = 0x7f070408;
+		public static final int library_materialize_libraryName = 0x7f070409;
+		public static final int library_materialize_libraryVersion = 0x7f07040a;
+		public static final int library_materialize_libraryWebsite = 0x7f07040b;
+		public static final int library_materialize_licenseId = 0x7f07040c;
+		public static final int library_materialize_owner = 0x7f07040d;
+		public static final int library_materialize_repositoryLink = 0x7f07040e;
+		public static final int library_materialize_year = 0x7f07040f;
 		public static final int status_bar_notification_info_overflow = 0x7f070013;
 	}
 	public static final class style {

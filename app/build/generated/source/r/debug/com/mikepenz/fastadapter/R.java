@@ -679,17 +679,17 @@ public final class R {
 		public static final int abc_shareactionprovider_share_with_application = 0x7f070011;
 		public static final int abc_toolbar_collapse_description = 0x7f070012;
 		public static final int define_fastadapter = 0x7f07002c;
-		public static final int library_fastadapter_author = 0x7f0703ee;
-		public static final int library_fastadapter_authorWebsite = 0x7f0703ef;
-		public static final int library_fastadapter_isOpenSource = 0x7f0703f0;
-		public static final int library_fastadapter_libraryDescription = 0x7f0703f1;
-		public static final int library_fastadapter_libraryName = 0x7f0703f2;
-		public static final int library_fastadapter_libraryVersion = 0x7f0703f3;
-		public static final int library_fastadapter_libraryWebsite = 0x7f0703f4;
-		public static final int library_fastadapter_licenseId = 0x7f0703f5;
-		public static final int library_fastadapter_owner = 0x7f0703f6;
-		public static final int library_fastadapter_repositoryLink = 0x7f0703f7;
-		public static final int library_fastadapter_year = 0x7f0703f8;
+		public static final int library_fastadapter_author = 0x7f0703ef;
+		public static final int library_fastadapter_authorWebsite = 0x7f0703f0;
+		public static final int library_fastadapter_isOpenSource = 0x7f0703f1;
+		public static final int library_fastadapter_libraryDescription = 0x7f0703f2;
+		public static final int library_fastadapter_libraryName = 0x7f0703f3;
+		public static final int library_fastadapter_libraryVersion = 0x7f0703f4;
+		public static final int library_fastadapter_libraryWebsite = 0x7f0703f5;
+		public static final int library_fastadapter_licenseId = 0x7f0703f6;
+		public static final int library_fastadapter_owner = 0x7f0703f7;
+		public static final int library_fastadapter_repositoryLink = 0x7f0703f8;
+		public static final int library_fastadapter_year = 0x7f0703f9;
 		public static final int status_bar_notification_info_overflow = 0x7f070013;
 	}
 	public static final class style {

@@ -29,6 +29,7 @@ public class SimpleContentFragment extends WebViewFragment {
 
         //TODO Use separated PreferenceHelper class, change with TODO in ModelFragment
         //TODO optimize not accessing Preferences every time instance been created
+        //TODO Data access not using ModelFragment!
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         if (prefs != null) {
             mFontSize = prefs.getInt(PREF_FONT_SIZE, 16);

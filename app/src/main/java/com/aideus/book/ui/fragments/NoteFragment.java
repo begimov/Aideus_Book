@@ -32,7 +32,7 @@ public class NoteFragment extends Fragment implements TextWatcher {
 
     private static final String KEY_POSITION = "position";
 
-    private EditText mEditor = null;
+    private EditText mEditText = null;
 
     private Intent mShareIntent = new Intent(Intent.ACTION_SEND).setType("text/plain");
 
@@ -55,8 +55,8 @@ public class NoteFragment extends Fragment implements TextWatcher {
                              ViewGroup container,
                              Bundle savedInstanceState) {
         View result = inflater.inflate(R.layout.note_fragment, container, false);
-        mEditor = (EditText) result.findViewById(R.id.et_note);
-        mEditor.addTextChangedListener(this);
+        mEditText = (EditText) result.findViewById(R.id.et_note);
+        mEditText.addTextChangedListener(this);
 
         Button buttonSave = (Button) result.findViewById(R.id.btn_note_save);
 
@@ -74,7 +74,8 @@ public class NoteFragment extends Fragment implements TextWatcher {
     public void onResume() {
         super.onResume();
         EventBus.getDefault().register(this);
-        if (TextUtils.isEmpty(mEditor.getText())) {
+        if (TextUtils.isEmpty(mEditText.getText())) {
+            //TODO Data access not using ModelFragment!
             DatabaseHelper db = DatabaseHelper.getInstance(getActivity());
             db.loadNote(getPosition());
         }
@@ -82,10 +83,11 @@ public class NoteFragment extends Fragment implements TextWatcher {
 
     @Override
     public void onPause() {
+        //TODO Data access not using ModelFragment!
         DatabaseHelper.getInstance(getActivity())
                 .updateNote(getPosition(),
-                        mEditor.getText().toString());
-        //TODO check if mEditor state is not changed from last database state
+                        mEditText.getText().toString());
+        //TODO check if mEditText state is not changed from last database state
         EventBus.getDefault().unregister(this);
         super.onPause();
     }
@@ -93,7 +95,7 @@ public class NoteFragment extends Fragment implements TextWatcher {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.notes, menu);
-        ShareActionProvider mShareActionProvider = null;
+        ShareActionProvider mShareActionProvider;
         mShareActionProvider = (ShareActionProvider) menu.findItem(R.id.share).getActionProvider();
         mShareActionProvider.setShareIntent(mShareIntent);
         super.onCreateOptionsMenu(menu, inflater);
@@ -102,7 +104,7 @@ public class NoteFragment extends Fragment implements TextWatcher {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.delete) {
-            mEditor.setText(null);
+            mEditText.setText(null);
             getContract().closeNotes();
             return (true);
         }
@@ -113,7 +115,8 @@ public class NoteFragment extends Fragment implements TextWatcher {
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(NoteLoadedEvent event) {
         if (event.getPosition() == getPosition()) {
-            mEditor.setText(event.getProse());
+            //TODO Data access not using ModelFragment!
+            mEditText.setText(event.getProse());
         }
     }
 

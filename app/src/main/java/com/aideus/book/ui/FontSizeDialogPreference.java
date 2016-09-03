@@ -51,6 +51,7 @@ public class FontSizeDialogPreference extends DialogPreference {
     @Override
     protected void onSetInitialValue(boolean restorePersistedValue, Object defaultValue) {
         if (restorePersistedValue) {
+            //TODO Data access not using ModelFragment!
             mFontSize = this.getPersistedInt(DEFAULT_FONT_SIZE);
         }
         super.onSetInitialValue(restorePersistedValue, defaultValue);
@@ -59,6 +60,7 @@ public class FontSizeDialogPreference extends DialogPreference {
     @Override
     protected void onDialogClosed(boolean positiveResult) {
         if (positiveResult) {
+            //TODO Data access not using ModelFragment!
             persistInt(mFontSize);
         }
         super.onDialogClosed(positiveResult);
