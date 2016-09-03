@@ -9,7 +9,7 @@
         android:layout_weight="1"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:id="@+id/editor"
+        android:id="@+id/et_note"
         android:gravity="start|top"
         android:hint="@string/hint" />
 
@@ -17,6 +17,6 @@
         android:text="@string/btn_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_editor_save" />
+        android:id="@+id/btn_note_save" />
 
 </LinearLayout>
