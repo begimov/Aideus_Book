@@ -19,6 +19,7 @@
     <string name="hint">Введите ваши комментарии&#8230;</string>
     <string name="aideus">AIDEUS</string>
     <string name="btn_save">Сохранить</string>
+    <string name="font_size_text_example">Пример текста</string>
 
 
 </resources>
