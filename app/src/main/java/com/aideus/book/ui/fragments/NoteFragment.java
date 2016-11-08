@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ShareActionProvider;
+import android.widget.Toast;
 
 import com.aideus.book.R;
 import com.aideus.book.data.local.DatabaseHelper;
@@ -31,6 +32,8 @@ public class NoteFragment extends Fragment implements TextWatcher {
     }
 
     private static final String KEY_POSITION = "position";
+
+    private static final String[] commentEmails = new String[]{"potapov@aideus.com", "begimov@aideus.com"};
 
     private EditText mEditText = null;
 
@@ -59,11 +62,26 @@ public class NoteFragment extends Fragment implements TextWatcher {
         mEditText.addTextChangedListener(this);
 
         Button buttonSave = (Button) result.findViewById(R.id.btn_note_save);
+        Button buttonSend = (Button) result.findViewById(R.id.btn_note_send);
 
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getContract().closeNotes();
+            }
+        });
+
+        buttonSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("message/rfc822");
+                i.putExtra(Intent.EXTRA_EMAIL, commentEmails);
+                i.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.book_comments)
+                        + " " + getResources().getString(R.string.book_name)
+                        + " " + Integer.toString(getPosition()));
+                i.putExtra(Intent.EXTRA_TEXT, mEditText.getText());
+                startActivity(Intent.createChooser(i, getResources().getString(R.string.send_mail)));
             }
         });
 

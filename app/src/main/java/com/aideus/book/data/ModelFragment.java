@@ -130,6 +130,7 @@ public class ModelFragment extends Fragment {
                 synchronized(this) {
                     mBook = gson.fromJson(reader, BookContents.class);
                 }
+                reader.close();
                 is.close();
                 if (baseDir.exists()) {
                     mBook.setBaseDir(baseDir);

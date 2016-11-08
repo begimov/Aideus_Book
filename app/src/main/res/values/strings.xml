@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">Aideus Книга</string>
+    <string name="book_name">Название книги</string>
     <string name="book">Книга</string>
     <string name="contacts">Контакты</string>
     <string name="about">О книге</string>
@@ -19,6 +20,9 @@
     <string name="hint">Введите ваши комментарии&#8230;</string>
     <string name="aideus">AIDEUS</string>
     <string name="btn_save">Сохранить</string>
+    <string name="btn_send">Отправить автору</string>
+    <string name="send_mail">Отправить email</string>
+    <string name="book_comments">комментарии по книге</string>
     <string name="font_size_text_example">Пример текста</string>
 
 

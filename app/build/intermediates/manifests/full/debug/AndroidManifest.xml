@@ -37,7 +37,8 @@
         <activity android:name="com.aideus.book.ui.PreferencesActivity" />
         <activity
             android:name="com.aideus.book.ui.NoteActivity"
-            android:theme="@style/android:Theme.Holo.Light.DarkActionBar" />
+            android:theme="@style/android:Theme.Holo.Light.DarkActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
 
         <service
             android:name="com.aideus.book.data.remote.DownloadCheckService"

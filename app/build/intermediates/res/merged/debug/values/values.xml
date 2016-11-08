@@ -711,8 +711,11 @@
     <string name="app_name">Aideus Книга</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="book">Книга</string>
+    <string name="book_comments">комментарии по книге</string>
+    <string name="book_name">Название книги</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="btn_save">Сохранить</string>
+    <string name="btn_send">Отправить автору</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="contacts">Контакты</string>
     <string name="contents">Содержание</string>
@@ -723,6 +726,7 @@
     <string name="define_materialdrawer">year;owner</string>
     <string name="define_materialize">year;owner</string>
     <string name="delete">Удалить</string>
+    <string name="font_size_text_example">Пример текста</string>
     <string name="gmd_3d_rotation">gmd_3d_rotation</string>
     <string name="gmd_ac_unit">gmd_ac_unit</string>
     <string name="gmd_access_alarm">gmd_access_alarm</string>
@@ -1732,6 +1736,7 @@
     <string name="material_drawer_close">Close</string>
     <string name="material_drawer_open">Open</string>
     <string name="notes">Комментарии</string>
+    <string name="send_mail">Отправить email</string>
     <string name="settings">Настройки</string>
     <string name="share">Поделиться</string>
     <string name="status_bar_notification_info_overflow">999+</string>

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.webkit.WebViewFragment;
 
 public class SimpleContentFragment extends WebViewFragment {
@@ -60,9 +61,10 @@ public class SimpleContentFragment extends WebViewFragment {
 
         //TODO Dynamic text size with ui controls
         webSettings.setDefaultFontSize(mFontSize);
-        //TODO Update font size in webview and/or pager
+        //TODO Update font size in webview and/or page
 
         getWebView().loadUrl(getPage());
+
         return(result);
     }
 
